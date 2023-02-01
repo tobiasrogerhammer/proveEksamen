@@ -1,5 +1,5 @@
 function getTable() {
-    fetch('http://localhost:3001/kurs')
+    fetch('http://172.16.1.1:3001/kurs')
         .then((response) => {
             if (!response.ok) {
                 throw new Error(response.statusText);

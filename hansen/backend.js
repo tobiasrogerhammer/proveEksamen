@@ -11,9 +11,9 @@ app.use(cors({
 
 const db = mysql.createConnection({
     host: 'localhost',
-    port: '8889',
+    port: '3306',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'kurs'
 })
 
@@ -25,7 +25,11 @@ db.connect((err) => {
     }
 });
 
-
+app.get("/", (req, res) => {
+    db.query("SELECT * FROM kurs", (err, result) => {
+        res.send(JSON.stringify({ data: result }));
+    });
+});
 
 app.get("/kurs", (req, res) => {
     db.query("SELECT * FROM kurs", (err, result) => {
