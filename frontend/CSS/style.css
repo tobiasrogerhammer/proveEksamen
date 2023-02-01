@@ -1,0 +1,46 @@
+body {
+    background-color: #6699cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #3473c7;
+    color: #fff;
+}
+#headline{
+    font-size: 200%;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: #fff;
+    margin-top: 20%;
+}
+
+.courses{
+    width: 100%;
+    height: 10%;
+    background-color: #3473c7;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#en{
+    display: none;
+    text-align: center;
+}

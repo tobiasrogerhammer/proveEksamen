@@ -25,14 +25,17 @@ db.connect((err) => {
     }
 });
 
-app.get("/", (req, res) => {
-    db.query("SELECT * FROM kurs", (err, result) => {
+
+
+app.get("/kursEn", (req, res) => {
+    db.query("SELECT * FROM kurs WHERE KursID = 1;", (err, result) => {
         res.send(JSON.stringify({ data: result }));
     });
 });
 
-app.get("/kurs", (req, res) => {
-    db.query("SELECT * FROM kurs", (err, result) => {
+
+app.get("/kursTo", (req, res) => {
+    db.query("SELECT * FROM kurs WHERE KursID = 2;", (err, result) => {
         res.send(JSON.stringify({ data: result }));
     });
 });

@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="JS/app.js"></script>
     <title>prøve eksamen</title>
 </head>
 
 <body>
-    <p>heja</p>
-    <button onclick="getTable()">Test database connection in console log</button>
+    <div id="header">
+        <div id="headline">Hansen Utvikling & RAM</div>
+    </div>
 
-    <table id="SQLTable">
-        <th>Kurs</th>
-        <th>Kursnavn</th>
-        <th>Dato</th>
-        <th>Tid</th>
-        <th>Adresse</th>
-        <th>Postnummer</th>
-        <th>Poststed</th>
-    </table>
+    <div id="content">
+        <div  id= "kursEn" class="courses" onclick="courseOne()">Kurs en</div>
 
-    <script src="JS/app.js"></script>
+        <div class="coursInfo" id="en">
+            Kursinformasjon
+        </div>
+
+        <div class="courses" onclick="courseTwo()">Kurs to</div>
+
+        <div class="coursInfo" id="to">
+            Kursinformasjon
+        </div>
+    </div>
 </body>
 
 </html>
