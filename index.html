@@ -12,43 +12,50 @@
 
 <body>
     <div id="header">
+        <div id="help">SPOC: it@hansen.no</div>
         <div id="headline">Hansen Utvikling & RAM</div>
     </div>
 
     <div id="content">
         <h3 id="intro">Sign up for one of our courses!</h3>
-        <div  id= "kursEn" class="courses" onclick="kursEn()">Virtualisering</div>
+        <div id="kursEn" class="courses" onclick="kursEn()">Virtualisering</div>
 
         <div class="coursInfo" id="en"></div>
 
-        <div  id="kursTo" class="courses" onclick="kursTo()">Konfigurasjon av server</div>
+        <div id="kursTo" class="courses" onclick="kursTo()">Konfigurasjon av server</div>
 
-        <div class="coursInfo" id="to"></div>
-        
-        <div id="login">Log in</div>
+        <div class="coursInfo" id="to">
+        </div>
+
+        <div id="login">Registrer deg</div>
+        <div id="logout">Fjern Bruker</div>
 
         <form id="deltakerForm" style="display: none;">
             <label for="personID">Person ID:</label>
             <input type="text" id="personID" name="personID">
-          
+
             <label for="fornavn">Fornavn:</label>
             <input type="text" id="fornavn" name="fornavn">
-          
+
             <label for="etternavn">Etternavn:</label>
             <input type="text" id="etternavn" name="etternavn">
-          
+
             <label for="adresse">Adresse:</label>
             <input type="text" id="adresse" name="adresse">
-          
+
             <label for="postnummer">Postnummer:</label>
             <input type="text" id="postnummer" name="postnummer">
-          
+
             <label for="poststed">Poststed:</label>
             <input type="text" id="poststed" name="poststed">
-          
+
             <button id="sub" type="submit">Submit</button>
-          </form>
-          
+        </form>
+
+        <div id="deletePerson">
+            <input type="text" id="fornavnInput" placeholder="Enter first name">
+            <button id="deleteUserBtn">Delete User</button>
+        </div>
 
     </div>
 </body>

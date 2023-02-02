@@ -14,9 +14,9 @@ app.use(cors({
 
 const db = mysql.createConnection({
     host: 'localhost',
-    port: '8889',
+    port: '3306',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'kurs'
 })
 
@@ -28,12 +28,28 @@ db.connect((err) => {
     }
 });
 
-app.get("/kurs", (req, res) => {
-    db.query("SELECT * FROM kurs;", (err, result) => {
+
+app.get("/deltaker", (req, res) => {
+    db.query("SELECT * FROM deltaker;", (err, result) => {
         res.send(JSON.stringify({ data: result }));
     });
 });
 
+app.delete("/deltaker", (req, res) => {
+    const { fornavn } = req.body;
+    const sql = `
+    DELETE FROM Deltaker
+    WHERE Fornavn = ?
+    `;
+    
+    db.query(sql, [fornavn], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.sendStatus(500);
+        }
+        return res.sendStatus(200);
+    });
+});
 app.post("/kurs", (req, res) => {
     const { personID, fornavn, etternavn, adresse, postnummer, poststed } = req.body;
     const sql = `
@@ -50,24 +66,9 @@ app.post("/kurs", (req, res) => {
       return res.sendStatus(201);
     });
   });
-       
-  
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
-
-
-
 
 app.get("/kursholder", (req, res) => {
     db.query("SELECT * FROM kursholder;", (err, result) => {
-        res.send(JSON.stringify({ data: result }));
-    });
-});
-
-app.get("/deltaker", (req, res) => {
-    db.query("SELECT * FROM deltaker;", (err, result) => {
         res.send(JSON.stringify({ data: result }));
     });
 });
@@ -77,3 +78,13 @@ app.get("/login", (req, res) => {
         res.send(JSON.stringify({ data: result }));
     });
 });
+
+app.get("/kurs", (req, res) => {
+    db.query("SELECT * FROM kurs;", (err, result) => {
+        res.send(JSON.stringify({ data: result }));
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})
