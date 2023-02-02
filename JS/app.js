@@ -11,7 +11,7 @@ function courseOne() {
         }
     });
 
-    fetch('http://172.16.1.1:3001/kursEn')
+    fetch('http://172.16.1.11:3001/kursEn')
         .then((response) => {
             if (!response.ok) {
                 throw new Error(response.statusText);
@@ -25,11 +25,12 @@ function courseOne() {
             document.getElementById('en').innerHTML = `<table><tbody>${tableElements.join('')}</tbody></table>`;
         })
         .catch(error => console.error('Error:', error));
+
 }
 
 
 function courseTwo() {
-    fetch('http://172.16.1.1:3001/kursTo')
+    fetch('http://172.16.1.11:3001/kursTo')
         .then((response) => {
             if (!response.ok) {
                 throw new Error(response.statusText);
