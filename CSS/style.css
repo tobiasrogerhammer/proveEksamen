@@ -30,7 +30,7 @@ body {
     align-items: center;
     font-size: 200%;
     color: #fff;
-    margin-top: 40%;
+    margin-top: 10%;
 }
 
 .courses{
@@ -38,10 +38,38 @@ body {
     height: 10%;
     background-color: #3473c7;
     text-align: center;
+    padding: 4%;
     border-radius: 15px;
     cursor: pointer;
 }
 
 .coursInfo {
-    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    text-align: center;
+}
+
+#deltakerForm{
+    flex-direction: column;
+    text-align: left;
+}
+
+#sub{
+    margin: 2%;
+}
+
+
+#login{
+    width: 20%;
+    height: 10%;
+    background-color: #3473c7;
+    text-align: center;
+    padding: 4%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input {
+    margin: 2%;
 }

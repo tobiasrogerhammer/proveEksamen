@@ -16,18 +16,40 @@
     </div>
 
     <div id="content">
-        <div  id= "kursEn" class="courses" onclick="courseOne()">Virtualisering</div>
+        <h3 id="intro">Sign up for one of our courses!</h3>
+        <div  id= "kursEn" class="courses" onclick="kursEn()">Virtualisering</div>
 
-        <div class="coursInfo" id="en">
-            Kursinformasjon
-        </div>
+        <div class="coursInfo" id="en"></div>
 
-        <div class="courses" onclick="courseTwo()">Konfigurasjon av server</div>
+        <div  id="kursTo" class="courses" onclick="kursTo()">Konfigurasjon av server</div>
 
-        <div class="coursInfo" id="to">
-            Kursinformasjon
-        </div>
+        <div class="coursInfo" id="to"></div>
         
+        <div id="login">Log in</div>
+
+        <form id="deltakerForm" style="display: none;">
+            <label for="personID">Person ID:</label>
+            <input type="text" id="personID" name="personID">
+          
+            <label for="fornavn">Fornavn:</label>
+            <input type="text" id="fornavn" name="fornavn">
+          
+            <label for="etternavn">Etternavn:</label>
+            <input type="text" id="etternavn" name="etternavn">
+          
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse">
+          
+            <label for="postnummer">Postnummer:</label>
+            <input type="text" id="postnummer" name="postnummer">
+          
+            <label for="poststed">Poststed:</label>
+            <input type="text" id="poststed" name="poststed">
+          
+            <button id="sub" type="submit">Submit</button>
+          </form>
+          
+
     </div>
 </body>
 
