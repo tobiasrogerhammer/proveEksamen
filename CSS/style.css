@@ -1,5 +1,5 @@
 body {
-    background-color: red;
+    background-color: #6699cc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,7 @@ body {
 }
 #headline{
     font-size: 200%;
+    position: absolute;
 }
 
 #content{
@@ -29,7 +30,7 @@ body {
     align-items: center;
     font-size: 200%;
     color: #fff;
-    margin-top: 20%;
+    margin-top: 40%;
 }
 
 .courses{
@@ -40,7 +41,7 @@ body {
     border-radius: 15px;
     cursor: pointer;
 }
-#en{
-    display: none;
-    text-align: center;
+
+.coursInfo {
+    padding: 1%;
 }

@@ -26,20 +26,29 @@ db.connect((err) => {
 });
 
 
-
-app.get("/kursEn", (req, res) => {
-    db.query("SELECT * FROM kurs WHERE KursID = 1;", (err, result) => {
+app.get("/kurs", (req, res) => {
+    db.query("SELECT * FROM kurs;", (err, result) => {
         res.send(JSON.stringify({ data: result }));
     });
 });
 
-
-app.get("/kursTo", (req, res) => {
-    db.query("SELECT * FROM kurs WHERE KursID = 2;", (err, result) => {
+app.get("/kursholder", (req, res) => {
+    db.query("SELECT * FROM kursholder;", (err, result) => {
         res.send(JSON.stringify({ data: result }));
     });
 });
 
+app.get("/deltaker", (req, res) => {
+    db.query("SELECT * FROM deltaker;", (err, result) => {
+        res.send(JSON.stringify({ data: result }));
+    });
+});
+
+app.get("/login", (req, res) => {
+    db.query("SELECT * FROM deltaker;", (err, result) => {
+        res.send(JSON.stringify({ data: result }));
+    });
+});
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
